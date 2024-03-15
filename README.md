@@ -1,1 +1,1 @@
-# Pneumonia_Detection_from-Chest-XRays
+# 2D Medical Image Classification: Pneumonia Detection
