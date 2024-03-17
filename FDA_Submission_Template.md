@@ -93,10 +93,10 @@ The dataset comprises 112,120 X-ray images, each annotated with disease labels, 
 
 **Patient Population Description for FDA Validation Dataset:**
 
-Age: 0 to 100
-Gender: Female (56%) and Male (44%)
-Type of imaging modality: DX
-Body part imaged: Chest
+ - Age: 0 to 100
+ - Gender: Female (56%) and Male (44%)
+ - Type of imaging modality: DX
+ - Body part imaged: Chest
 
 **Ground Truth Acquisition Methodology:**
 
