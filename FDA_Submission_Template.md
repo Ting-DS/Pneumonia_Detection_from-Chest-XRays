@@ -68,16 +68,25 @@ By adjusting the network structure and training process, we enable this new mode
 **Final Threshold and Explanation:**
 
 ### 4. Databases
+
+For EDA process, metadata for all images (Data_Entry_2017.csv) containing Image Index, Finding Labels, Follow-up #, Patient ID, Patient Age, Patient Gender, View Position, Original Image Size, and Original Image Pixel Spacing.
  (For the below, include visualizations as they are useful and relevant)
+**Age and Gender:**
 
-**Description of Training Dataset:** 
+**View Position:**
+
+**Comorbidies:**
 
 
-**Description of Validation Dataset:** 
+**Description of Training Dataset:** The training dataset consisted of 2290 image files, with a 50/50 split of positive and negative pneumonia cases.
+
+**Description of Validation Dataset:** The validation dataset consisted of 1430 image files, with a 20/80 split of positive and negative pneumonia cases to approach a more realistic distribution of pneumonia in the real world.
 
 
 ### 5. Ground Truth
+Training and validation data (112,120 frontal-view chest X-ray PNG images in 1024*1024 resolution) were drawn from a comprehensive dataset curated by the NIH to address the scarcity of large X-ray datasets with accurate disease labels, vital for developing disease detection algorithms. While the original radiology reports remain inaccessible to the public, detailed information on the labeling process can be accessed at this [paper](https://arxiv.org/abs/1705.02315).
 
+The dataset comprises 112,120 X-ray images, each annotated with disease labels, derived from 30,805 unique patients. These labels were generated through Natural Language Processing (NLP) applied to radiological reports, capturing 14 common thoracic pathologies such as Atelectasis, Consolidation, and Pneumonia. One notable limitation of this dataset is its reliance on NLP-extracted labels, which may contain errors. However, the estimated accuracy of the NLP labeling exceeds 90%.
 
 
 ### 6. FDA Validation Plan
