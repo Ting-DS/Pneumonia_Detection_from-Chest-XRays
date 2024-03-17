@@ -15,6 +15,7 @@
 **Device Limitations:** The device can't replace the diagnosis decision of radiologist, only as a reference.
 
 **Clinical Impact of Performance:** 
+
 In non-emergency situations, it is advisable to utilize the algorithm to assist in radiological diagnosis of pneumonia.
 
 With a specificity of 30.62%, a negative prediction (no pneumonia) is correct, while a positive prediction (pneumonia) is correct with a precision of 31.91%.
