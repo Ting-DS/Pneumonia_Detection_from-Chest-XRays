@@ -93,6 +93,16 @@ The dataset comprises 112,120 X-ray images, each annotated with disease labels, 
 
 **Patient Population Description for FDA Validation Dataset:**
 
+Age: 0 to 100
+Gender: Female (56%) and Male (44%)
+Type of imaging modality: DX
+Body part imaged: Chest
+
 **Ground Truth Acquisition Methodology:**
 
+The gold standard: Sputum test or Pleural fluid culture, which is expensive and time consumed.
+The sliver standard: The comprehensive diagnostic results of three independent radiologists on X-ray reports.
+
 **Algorithm Performance Standard:**
+
+The performance of the model should be evaluated based on its F1 score compared to the silver standard. According to Rajpurkar et al. (2017), the average F1 score of radiologists is 0.387. To validate the effectiveness of this model, its F1 score should significantly exceed that of radiologists statistically.
