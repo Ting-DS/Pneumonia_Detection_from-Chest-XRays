@@ -35,9 +35,10 @@ The model exhibits a high recall rate of 83.92%, accurately identifying actual p
 **Preprocessing Steps:**
 
  - Images are resized to 224x224 to fit the input dimension of the pre-trained VGG16 CNN model.
- - Rescaled images by standardization (substract mean and divide by standard deviation) because VGG16 pretrained weights expect normalized data as input
+ - Rescaled pixel values of image by standardization (substract mean and divide by standard deviation) because VGG16 pretrained weights expect normalized data as input
 
 **CNN Architecture:** 
+
 We start from a classic Convolutional Neural Network (CNN) model VGG16, which has been pre-trained on a large image dataset and learned to extract features from images for classification tasks.
 
 Then, we built a new model on top of this pre-trained VGG16 model, called the attention model. The goal of the attention model is to make the neural network focus not just on the entire image equally but selectively on important parts of the image, enabling more effective learning and feature extraction from images.
@@ -48,12 +49,17 @@ By adjusting the network structure and training process, we enable this new mode
 ### 3. Algorithm Training
 
 **Parameters:**
-* Types of augmentation used during training
-* Batch size
-* Optimizer learning rate
-* Layers of pre-existing architecture that were frozen
-* Layers of pre-existing architecture that were fine-tuned
-* Layers added to pre-existing architecture
+- Image augmentation during training: Rescaled 1/255, Centered & Std normalized sample-wise, Horizontal flips, Height/Width shift range 0.05, Zoom range 0.15
+- Batch size:
+  - Training: 64
+  - Validation: 1024
+  - Prediction: 64
+- Optimizer learning rate: Adam 0.0001 (1e-4)
+- Layers of pre-existing architecture:
+  - Frozen: First 17 layers of VGG16
+  - Fine-tuned: All dense layers of VGG16 and attention
+- Layers added to pre-existing architecture: Batch Normalization, Conv2D, Locally Connected 2D, Conv2D, Multiply, Global Avg Pooling, Global Avg Pooling, RescaleGAP, Dropout, Dense, Dropout, Dense
+
 
 << Insert algorithm training performance visualization >> 
 
