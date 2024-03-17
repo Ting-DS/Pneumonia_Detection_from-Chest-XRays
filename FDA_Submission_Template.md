@@ -28,10 +28,22 @@ The model exhibits a high recall rate of 83.92%, accurately identifying actual p
 
 **DICOM Checking Steps:**
 
+ - is examined body part the chest area?
+ - is the image scan position either posterior/anterior (PA) or anterior/posterior (AP)?
+ - is the modality a digital radiography (DX)?
+
 **Preprocessing Steps:**
 
-**CNN Architecture:**
+ - Images are resized to 224x224 to fit the input dimension of the pre-trained VGG16 CNN model.
+ - Rescaled images by standardization (substract mean and divide by standard deviation) because VGG16 pretrained weights expect normalized data as input
 
+**CNN Architecture:** 
+We start from a classic Convolutional Neural Network (CNN) model VGG16, which has been pre-trained on a large image dataset and learned to extract features from images for classification tasks.
+
+Then, we built a new model on top of this pre-trained VGG16 model, called the attention model. The goal of the attention model is to make the neural network focus not just on the entire image equally but selectively on important parts of the image, enabling more effective learning and feature extraction from images.
+
+To achieve this goal, we added some special layers after the convolution and pooling layers of VGG16, including a Global Average Pooling layer (GAP). The role of global average pooling is to take the average of all pixel values in each feature map, transforming it into a fixed-length vector. This vector contains the average importance of each feature map and better reflects the importance level of different parts in an image.
+By adjusting the network structure and training process, we enable this new model to automatically learn and determine which parts are crucial in an image, thereby enhancing its performance for tasks like image classification or other related tasks.
 
 ### 3. Algorithm Training
 
