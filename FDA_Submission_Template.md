@@ -18,9 +18,9 @@
 
 In non-emergency situations, it is advisable to utilize the algorithm to assist in radiological diagnosis of pneumonia.
 
-With a specificity of 30.62%, a negative prediction (no pneumonia) is correct, while a positive prediction (pneumonia) is correct with a precision of 31.91%.
+With a specificity of 38%, a negative prediction (no pneumonia) is correct, while a positive prediction (pneumonia) is correct with a precision of 33%.
 
-The model exhibits a high recall rate of 83.92%, accurately identifying actual positive cases (pneumonia). When the prediction result is negative, the credibility is high because the algorithm has a strong ability to identify positive patients. This high recall rate makes the predictions well-suited for aiding in screening studies and prioritizing radiologists' worklists, where reviewing predicted positive cases can be prioritized.
+The model exhibits a high recall rate of 81%, accurately identifying actual positive cases (pneumonia). When the prediction result is negative, the credibility is high because the algorithm has a strong ability to identify positive patients. This high recall rate makes the predictions well-suited for aiding in screening studies and prioritizing radiologists' worklists, where reviewing predicted positive cases can be prioritized.
 
 ### 2. Algorithm Design and Function
 
@@ -43,9 +43,9 @@ We start from a classic Convolutional Neural Network (CNN) model VGG16, which ha
 
 Then, we built a new model on top of this pre-trained VGG16 model, called the attention model. The goal of the attention model is to make the neural network focus not just on the entire image equally but selectively on important parts of the image, enabling more effective learning and feature extraction from images.
 
-To achieve this goal, we added some special layers after the convolution and pooling layers of VGG16, including a Global Average Pooling layer (GAP). The role of global average pooling is to take the average of all pixel values in each feature map, transforming it into a fixed-length vector. This vector contains the average importance of each feature map and better reflects the importance level of different parts in an image.
-By adjusting the network structure and training process, we enable this new model to automatically learn and determine which parts are crucial in an image, thereby enhancing its performance for tasks like image classification or other related tasks.
+To achieve this goal, we added some special layers after the convolution and pooling layers of VGG16, including a Global Average Pooling layer (GAP). The role of global average pooling is to take the average of all pixel values in each feature map, transforming it into a fixed-length vector. This vector contains the average importance of each feature map and better reflects the importance level of different parts in an image. By adjusting the network structure and training process, we enable this new model to automatically learn and determine which parts are crucial in an image, thereby enhancing its performance for tasks like image classification or other related tasks.
 
+Note: regarding neural network model structure, I'm inspired by @Claudia and do some modification on layers and hyperparameters.
 ### 3. Algorithm Training
 
 **Parameters:**
