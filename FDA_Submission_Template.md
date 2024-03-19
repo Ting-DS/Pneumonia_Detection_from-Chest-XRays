@@ -85,7 +85,7 @@ For EDA process, metadata for all images (Data_Entry_2017.csv) containing Image 
 
 **Comorbidies:**
 <center>
-<img width="456" alt="Comorbidies" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/4325539b-118d-4a8d-b010-e3cbd2db41ed">
+<img width="1200" alt="Comorbidies" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/4325539b-118d-4a8d-b010-e3cbd2db41ed">
 </center>
 
 **Description of Training Dataset:** The training dataset consisted of 2290 image files, with a 50/50 split of positive and negative pneumonia cases.
