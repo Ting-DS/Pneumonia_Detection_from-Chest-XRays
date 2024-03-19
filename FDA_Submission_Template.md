@@ -61,7 +61,7 @@ Note: regarding neural network model structure, I'm inspired by @Claudia and do 
 **Training loss & Validation loss**
 
 <center>
-<img width="1200" alt="Patient Gender" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00">
+<img width="1000" alt="Patient Gender" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00">
 </center>
 
 <center>
