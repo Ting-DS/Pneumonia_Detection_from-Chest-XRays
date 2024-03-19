@@ -44,8 +44,11 @@ Then, we built a new model on top of this pre-trained VGG16 model, called the at
 To achieve this goal, we added some special layers after the convolution and pooling layers of VGG16, including a Global Average Pooling layer (GAP). The role of global average pooling is to take the average of all pixel values in each feature map, transforming it into a fixed-length vector. This vector contains the average importance of each feature map and better reflects the importance level of different parts in an image. By adjusting the network structure and training process, we enable this new model to automatically learn and determine which parts are crucial in an image, thereby enhancing its performance for tasks like image classification or other related tasks.
 
 Note: regarding neural network model structure, I'm inspired by @Claudia and do some modification on layers and hyperparameters.
+
+**Attention Layer**
 ![model arch](https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/b387a18c-1a32-4865-b267-2c2c027a26b6)
 
+**Overall VGG16 adding attention layer model architecture**
 ![model arch2](https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/d69e33a2-0f09-49bf-a86b-8f1764dee1aa)
 
 ### 3. Algorithm Training
