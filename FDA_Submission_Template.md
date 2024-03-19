@@ -58,8 +58,7 @@ Note: regarding neural network model structure, I'm inspired by @Claudia and do 
   - Fine-tuned: All dense layers of VGG16 and attention
 - Layers added to pre-existing architecture: Batch Normalization, Conv2D, Locally Connected 2D, Conv2D, Multiply, Global Avg Pooling, Global Avg Pooling, RescaleGAP, Dropout, Dense, Dropout, Dense
 
-
-<< Insert algorithm training performance visualization >> 
+![Training history](https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00)
 
 << Insert P-R curve >>
 
