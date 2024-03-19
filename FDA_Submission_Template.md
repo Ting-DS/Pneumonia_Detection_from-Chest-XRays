@@ -61,11 +61,11 @@ Note: regarding neural network model structure, I'm inspired by @Claudia and do 
 **Training loss & Validation loss**
 
 <center>
-<img width="1000" alt="Patient Gender" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00">
+<img width="800" alt="Patient Gender" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00">
 </center>
 
 <center>
-<img width="518" alt="PR" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/cb780465-8cbb-4ea5-be44-7afdd0e57cc7">
+<img width="600" alt="PR" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/cb780465-8cbb-4ea5-be44-7afdd0e57cc7">
 </center>
 
 **Final Threshold and Explanation:**
