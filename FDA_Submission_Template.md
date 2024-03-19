@@ -16,11 +16,11 @@
 
 **Clinical Impact of Performance:** 
 
-In non-emergency situations, it is advisable to utilize the algorithm to assist in radiological diagnosis of pneumonia.
+In non-emergency scenarios, leveraging the algorithm to aid in the radiological diagnosis of pneumonia is recommended.
 
-With a specificity of 38%, a negative prediction (no pneumonia) is correct, while a positive prediction (pneumonia) is correct with a precision of 33%.
+With a specificity of 32%, the algorithm reliably identifies negative cases (no pneumonia), while achieving a precision of 31% for positive predictions (pneumonia).
 
-The model exhibits a high recall rate of 81%, accurately identifying actual positive cases (pneumonia). When the prediction result is negative, the credibility is high because the algorithm has a strong ability to identify positive patients. This high recall rate makes the predictions well-suited for aiding in screening studies and prioritizing radiologists' worklists, where reviewing predicted positive cases can be prioritized.
+The model demonstrates a noteworthy recall rate of 81%, accurately pinpointing true positive instances (pneumonia). Consequently, when the algorithm yields a negative prediction, it instills confidence due to its robust capability in identifying positive patients. This heightened recall rate renders the predictions particularly suitable for supporting screening initiatives and streamlining radiologists' workflows. Prioritizing the review of predicted positive cases can optimize efficiency in radiological assessments.
 
 ### 2. Algorithm Design and Function
 
@@ -58,11 +58,23 @@ Note: regarding neural network model structure, I'm inspired by @Claudia and do 
   - Fine-tuned: All dense layers of VGG16 and attention
 - Layers added to pre-existing architecture: Batch Normalization, Conv2D, Locally Connected 2D, Conv2D, Multiply, Global Avg Pooling, Global Avg Pooling, RescaleGAP, Dropout, Dense, Dropout, Dense
 
-![Training history](https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00)
+**Training loss & Validation loss**
 
-<< Insert P-R curve >>
+<center>
+<img width="1200" alt="Patient Gender" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/406e967b-e876-4bc3-b612-4d78f7d2ec00">
+</center>
+
+<center>
+<img width="518" alt="PR" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/cb780465-8cbb-4ea5-be44-7afdd0e57cc7">
+</center>
 
 **Final Threshold and Explanation:**
+
+<center>
+<img width="600" alt="F1 score vs. threshold" src="https://github.com/Ting-DS/Pneumonia_Detection_from-Chest-XRays/assets/107707078/2dcedaae-cb40-4953-a69d-a1c37a2d8330">
+</center>
+
+With the best threshold at 0.62, the model exhibits a high Recall (0.81), indicating its ability to accurately predict positive cases (pneumonia) among all actual positive cases. This is crucial for minimizing false negatives, ensuring fewer cases of pneumonia are missed. However, the Precision (0.31) is relatively low, suggesting a considerable proportion of false positives when the model predicts positive cases. This could lead to overdiagnosis. Additionally, the Specificity (0.32) is also not very high, indicating a lower accuracy in predicting negative cases (no pneumonia) among all actual negative cases. Consequently, when applying this model, a trade-off between Recall and Precision needs to be considered to determine appropriate thresholds, and further refinement is necessary to enhance the overall performance of the model.
 
 ### 4. Databases
 
