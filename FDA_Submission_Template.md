@@ -1,4 +1,4 @@
-# FDA  Submission for 510(k) Clearance
+# FDA  Submission
 
 **Your Name:** Ting Lu
 
