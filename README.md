@@ -1,4 +1,4 @@
-# FDA  Submission
+# FDA Submission: Pneumonia Detection Algorithms from Chest X-Rays using
 
 **Your Name:** Ting Lu
 
